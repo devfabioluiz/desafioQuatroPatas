@@ -1,0 +1,43 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #f8d964;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.adopt-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.adopt-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
