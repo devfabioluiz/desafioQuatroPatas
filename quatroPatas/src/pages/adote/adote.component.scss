@@ -1,0 +1,28 @@
+.img-adote {
+  width: 30%;
+  height: 30%;
+}
+
+.adopt {
+  display: flex;
+  gap: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.adopt-title {
+  text-align: center;
+  align-content: center;
+  font-family: "Amatic SC", sans-serif;
+  margin-left: 5%;
+  display: block;
+}
+
+.adote-agora {
+  font-size: 99px;
+  font-weight: 700;
+  line-height: 124.84px;
+  text-align: left;
+  margin-bottom: 5%;
+}

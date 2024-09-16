@@ -1,3 +1,7 @@
+footer {
+  bottom: 0;
+}
+
 .copyright {
   width: 100%;
   height: 25%;
@@ -6,8 +10,10 @@
   opacity: 0px;
   background-color: #6c3659;
   display: flex;
-  align-content: center;
   color: #fff;
+  padding: 1% 1% 1% 0;
+  gap: 10%;
+  justify-content: center;
 }
 
 .aviso-violencia {
@@ -16,8 +22,17 @@
 
 .informacoes {
   background-color: #f8d964;
-  padding: 20px;
+  padding: 5% 10% 5% 10%;
   text-align: center;
   width: 100%;
   height: 40%;
+  display: flex;
+}
+
+.endereco {
+  font-family: Nunito;
+  font-size: 18px;
+  width: 40%;
+  display: block;
+  float: right;
 }

@@ -1,0 +1,12 @@
+<div class="card" [ngStyle]="{ 'background-color': data.backgroundColor }">
+  <div mat-dialog-title>
+    <button class="close" mat-icon-button mat-dialog-close>X</button>
+  </div>
+  <div mat-dialog-content class="card-content">
+    <img [src]="data.imageSrc" [alt]="data.imageAlt" />
+    <div class="card-text">
+      <h2>{{ data.title }}</h2>
+      <p>{{ data.message }}</p>
+    </div>
+  </div>
+</div>
