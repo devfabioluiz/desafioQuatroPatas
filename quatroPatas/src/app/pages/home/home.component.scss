@@ -1,0 +1,74 @@
+$primary-color: #7918d9;
+$secondary-color: #f4f4f4;
+$white-color: #ffffff;
+$button-padding: 15px 32px;
+$button-font-size: 16px;
+$border-radius: 8px;
+$box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+$hover-box-shadow: 8px 8px 20px 0px #7918d980;
+
+@mixin button-styles($bg-color, $text-color: $white-color, $border: none) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: $border;
+  padding: $button-padding;
+  text-align: center;
+  text-decoration: none;
+  font-size: $button-font-size;
+  cursor: pointer;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: box-shadow 0.4s ease;
+  display: inline-block;
+  margin: 4px 2px;
+  &:hover {
+    box-shadow: $hover-box-shadow;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+
+  .button1 {
+    @include button-styles($primary-color);
+  }
+
+  .button2 {
+    @include button-styles(
+      $secondary-color,
+      $primary-color,
+      2px solid $primary-color
+    );
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+}
+
+// Adopt styles
+.adopt-container {
+  .adopt {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    padding-top: 2%;
+    .adopt-title {
+      text-align: center;
+      margin-left: 5%;
+      .adote-agora {
+        font-size: 99px;
+        font-weight: 700;
+        line-height: 125px;
+        text-align: left;
+        margin-bottom: 5%;
+        font-family: "Amatic SC", sans-serif;
+      }
+    }
+    .img-adote {
+      width: 30%;
+      height: 30%;
+    }
+  }
+}

@@ -1,38 +1,64 @@
-footer {
-  bottom: 0;
+$footer-bg-color: #6c3659;
+$info-bg-color: #f8d964;
+$text-color-light: #fff;
+$text-color-dark: #333;
+$font-family-main: "Nunito", sans-serif;
+$font-weight-bold: 800;
+$padding-default: 5%;
+$padding-sm: 1% 1% 1% 0;
+
+@mixin footer-layout($bottom) {
+  position: absolute;
+  bottom: $bottom;
+  width: 100%;
 }
 
-.copyright {
+@mixin copyright-styles {
   width: 100%;
   height: 25%;
   top: 270px;
-  gap: 0px;
-  opacity: 0px;
-  background-color: #6c3659;
+  opacity: 0;
+  background-color: $footer-bg-color;
   display: flex;
-  color: #fff;
-  padding: 1% 1% 1% 0;
+  color: $text-color-light;
+  padding: $padding-sm;
   gap: 10%;
   justify-content: center;
 }
 
-.aviso-violencia {
-  font-weight: 800;
-}
-
-.informacoes {
-  background-color: #f8d964;
-  padding: 5% 10% 5% 10%;
+@mixin info-styles {
+  background-color: $info-bg-color;
+  padding: $padding-default;
   text-align: center;
   width: 100%;
   height: 40%;
   display: flex;
 }
 
-.endereco {
-  font-family: Nunito;
+@mixin address-styles {
+  font-family: $font-family-main;
   font-size: 18px;
   width: 40%;
   display: block;
   float: right;
+}
+
+footer {
+  @include footer-layout(0);
+}
+
+.copyright {
+  @include copyright-styles;
+}
+
+.aviso-violencia {
+  font-weight: $font-weight-bold;
+}
+
+.informacoes {
+  @include info-styles;
+}
+
+.endereco {
+  @include address-styles;
 }

@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { PetService } from 'src/app/pet.service';
 import { ModalComponent } from '../modal/modal.component';
+import { PetService } from 'src/app/services/pet.service';
+import { Pet } from 'src/app/models/pet.model';
 
 @Component({
   selector: 'card',
@@ -12,13 +13,14 @@ export class CardComponent {
     @Input() image!: string;
     @Input() name!: string;
     @Input() description!: string;
-    public items: any[] = [];
+    public items: Pet[] = [];
     public isFavourite: boolean = false;
   
     constructor(private petService: PetService, public dialog: MatDialog) {}
+
   
     ngOnInit() {
-      this.petService.getPets().subscribe((data: any) => {
+      this.petService.getPets().subscribe((data: Pet[]) => {
         this.items = data;
       });
     }

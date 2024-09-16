@@ -1,0 +1,44 @@
+// Variables
+$font-family-title: "Amatic SC", sans-serif;
+$title-font-size: 99px;
+$title-line-height: 125px;
+$title-margin-bottom: 5%;
+$img-size: 30%;
+$gap-size: 50px;
+$container-padding-top: 2%;
+
+@mixin title-styles($font-size, $line-height, $margin-bottom) {
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: $line-height;
+  text-align: left;
+  margin-bottom: $margin-bottom;
+}
+
+.adopt-container {
+  .adopt {
+    display: flex;
+    gap: $gap-size;
+    justify-content: space-between;
+    padding-top: $container-padding-top;
+
+    .adopt-title {
+      text-align: center;
+      margin-left: 5%;
+      font-family: $font-family-title;
+
+      .adote-agora {
+        @include title-styles(
+          $title-font-size,
+          $title-line-height,
+          $title-margin-bottom
+        );
+      }
+    }
+
+    .img-adote {
+      width: $img-size;
+      height: $img-size;
+    }
+  }
+}

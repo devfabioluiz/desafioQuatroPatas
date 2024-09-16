@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from '../pages/home/home.component';
-import { AdoteComponent } from '../pages/adote/adote.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AdoteComponent } from './pages/adote/adote.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -14,6 +14,7 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './shared/card/card.component';
+import { NossasRegrasComponent } from './pages/nossas-regras/nossas-regras.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CardComponent } from './shared/card/card.component';
     FooterComponent,
     ModalComponent,
     CardComponent,
+    NossasRegrasComponent,
   ],
   imports: [
     BrowserModule,

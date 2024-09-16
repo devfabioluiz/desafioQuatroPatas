@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Pet } from '../models/pet.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,12 @@ export class PetService {
 
   constructor(private http: HttpClient) { }
 
-  getPets(): Observable<any> {
+  getPets(): Observable<Pet[]> {
     const headers = new HttpHeaders({
       'X-Api-Key': this.apiKey,
       'Content-Type': 'application/json',
     });
 
-    return this.http.get(`${this.apiUrl}${this.apiKey}`);
+    return this.http.get<Pet[]>(`${this.apiUrl}${this.apiKey}`);
   }
 }
